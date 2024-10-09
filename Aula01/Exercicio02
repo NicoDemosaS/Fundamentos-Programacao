@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//Exercicio DOIS!
+
+int main
+{
+int codigo;
+char descricao[150];
+float preco;
+
+printf("Codigo do Produto:");
+scanf("%d", &codigo);
+setbuf(stdin, NULL);
+
+printf("Descricao do Produto:");
+gets(descricao);
+setbuf(stdin, NULL);
+
+printf("Valor do Produto:");
+scanf("%f", &preco);
+setbuf(stdin, NULL);
+
+printf("Codigo: %d, Descricao: %s, Preco: %.2f", codigo, descricao, preco);
+}
