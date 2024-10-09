@@ -12,4 +12,6 @@ printf("Digite um numero:");
 scanf("%d", &valor1);
 
 printf("%d, %d, %d", valor1, valor1+1, valor1-1);
+
+return 0;
 }
