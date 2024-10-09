@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main
+{
+int a, b, aux;
+printf("Digite o valor a:");
+scanf("%d", &a);
+printf("Digite o valor b:");
+scanf("%d", &b);
+
+aux = b;
+b = a;
+a = aux;
+
+
+printf("A: %d, B: %d", a, b);
+}
