@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main
+int main()
 {
 float comprimento, largura, altura, volume;
 printf("Comprimento: ");
@@ -13,4 +13,5 @@ scanf("%f", &altura);
 
 volume = comprimento * largura * altura;
 printf("A caixa com \nComprimento: %.2f \nLargura: %.2f \nAltura: %.2f \nVolume Total: %.2f", comprimento, largura, altura, volume);
+return 0;
 }
