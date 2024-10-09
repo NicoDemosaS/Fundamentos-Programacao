@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+#include <locale.h>
+
+int main()
+{
+//Aula 02 Exercicio 01
+float nota1, nota2;
+printf("Nota 1:");
+scanf("%f", &nota1);
+printf("Nota 2:");
+scanf("%f", &nota2);
+
+printf("\n Nota 1:%.2f \n Nota 2: %.2f \n Media: %.2f", nota1, nota2, (nota1 + nota2)/2);
+return 0;
+}
