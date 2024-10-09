@@ -1,1 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
 
+int main()
+{
+//Exercicio UM!
+int valor1;
+int sucessor;
+
+printf("Digite um numero:");
+scanf("%d", &valor1);
+
+printf("%d, %d, %d", valor1, valor1+1, valor1-1);
+}
