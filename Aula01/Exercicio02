@@ -3,7 +3,7 @@
 
 //Exercicio DOIS!
 
-int main
+int main()
 {
 int codigo;
 char descricao[150];
@@ -22,4 +22,5 @@ scanf("%f", &preco);
 setbuf(stdin, NULL);
 
 printf("Codigo: %d, Descricao: %s, Preco: %.2f", codigo, descricao, preco);
+return 0;
 }
