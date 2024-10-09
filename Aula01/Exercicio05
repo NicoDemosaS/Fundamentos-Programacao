@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+//Exercicio Cinco
+char nome[30], endereco[50], telefone[15];
+printf("Nome: ");
+gets(nome);
+printf("Endereco: ");
+gets(endereco);
+printf("Telefone: ");
+gets(telefone);
+
+printf("Seus dados: \nNome: %s\nEndereço: %s \nTelefone: %s", nome, endereco, telefone);
+
+return 0;
+}
