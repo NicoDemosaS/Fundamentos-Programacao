@@ -1,0 +1,15 @@
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <math.h>
+
+    int main()
+    {
+       char nome[30];
+       float salariobr, salarioliq;
+       printf("Salario Bruto: ");
+       scanf("%f", &salariobr);
+       salarioliq = salariobr * ((100-20.5)/100);
+
+       printf("O salario Liquido apos descontos: %.2f", salarioliq);
+
+    }
