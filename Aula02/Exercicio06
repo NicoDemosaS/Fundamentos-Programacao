@@ -7,20 +7,30 @@
     int main()
     {
     //Exercicio 06 da Aula 02
-    int reais,centavos, notas_cem, notas_cinquenta, notas_vinte, notas_dez, notas_cinco, resto, moedas_um, moedas_cinquenta, moedas_vintecinco, moedas_dez, moedas_cinco;
+    int reais,centavos, notas_cem, notas_cinquenta, notas_vinte, notas_dez, notas_cinco, resto, moedas_um, moedas_cinquenta, moedas_vintecinco, moedas_dez, moedas_cinco, notas_dois;
     scanf("%d,%d", &reais, &centavos);
     //Reais
     notas_cem = reais/100;
     resto = reais % 100;
+
     notas_cinquenta = resto / 50;
     resto = resto % 50;
+
     notas_vinte = resto / 20;
     resto = resto % 20;
+
     notas_dez = resto / 10;
     resto = resto % 10;
+
     notas_cinco = resto / 5;
+    resto = resto % 5;
+
+    notas_dois = resto / 2;
+    resto = resto % 2;
+
+    moedas_um = resto / 1;
     //Centavos
-    moedas_um = centavos / 100;
+    moedas_cinquenta = centavos / 100;
     resto = centavos % 100;
     moedas_cinquenta = resto / 50;
     resto = resto % 50;
@@ -36,6 +46,7 @@
     printf("\nNotas Vinte: %d", notas_vinte);
     printf("\nNotas Dez: %d ", notas_dez);
     printf("\nNotas Cinco: %d", notas_cinco);
+    printf("\nNotas Dois: %d", notas_dois);
     printf("\nMoedas 1: %d", moedas_um);
     printf("\nMoedas 50: %d", moedas_cinquenta);
     printf("\nMoedas 25: %d", moedas_vintecinco);
@@ -46,4 +57,3 @@
 
     return 0;
     }
-
