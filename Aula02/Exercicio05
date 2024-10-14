@@ -2,7 +2,7 @@
     #include <stdlib.h>
     #include <math.h>
 
-// NAO TA COMPLETO ARRUME!!!!!!!!!!!!
+
 
     int main()
     {
@@ -23,12 +23,17 @@
     area_base = PI * raio * raio;
     area_lateral = 2 * PI * raio * altura;
     area_total = area_lateral + 2 * area_base;
+    printf("Area Base %.2f metros quadrados", area_base);
+    printf("\nArea Lateral %.2f metros quadrados", area_lateral);
+    printf("\nArea Total %.2f metros quadrados", area_total);
+
 // cada litro DE TINTA PINTA 3 METROS QUADRADOS
-    printf("area total: %.2f metros quadrados", area_total);
     quantidade_tinta = area_total / 3;
-    quantidade_lata = quantidade_tinta * 5;
+
+    quantidade_lata = (quantidade_tinta / 5) + 1;
+    printf("\nQuantidade de Latas: %d Latas de 5L", quantidade_lata);
     printf("\nQuantidade de Tinta: %d L", quantidade_tinta + 1);
-    printf("\nCusto Total: %d REAIS", (quantidade_lata) * 50);
+    printf("\nCusto Total: %d REAIS", quantidade_lata * 50);
 
     return 0;
     }
