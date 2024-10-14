@@ -6,7 +6,7 @@
 
     int main()
     {
-    float custo_lata, altura, raio, PI, area_base, area_total, comprimento, area_lateral;
+    float custo_lata, altura, raio, PI, area_base, area_total, area_lateral;
     int quantidade_tinta, quantidade_lata;
     PI = 3.1415;
     custo_lata = 50;
@@ -37,4 +37,3 @@
 
     return 0;
     }
-
