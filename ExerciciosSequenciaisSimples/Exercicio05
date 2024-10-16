@@ -1,0 +1,16 @@
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <math.h>
+
+
+
+    int main()
+    {
+    int idade, mes, ano;
+    printf("Idade em dias: ");
+    scanf("%d", &idade);
+    mes = idade / 30;
+    ano = mes / 12;
+    printf("Voce tem %d Ano(s), %d Mes(es) e %d Dia(s) de Idade", ano, mes, idade);
+    return 0;
+    }
