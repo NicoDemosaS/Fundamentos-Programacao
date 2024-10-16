@@ -1,0 +1,18 @@
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <math.h>
+
+
+
+    int main()
+    {
+    float real, real_convertido, cotacao_dolar;
+    printf("Cotacao do Dolar: ");
+    scanf("%f", &cotacao_dolar);
+    printf("Reais a Converter: ");
+    scanf("%f", &real);
+    real_convertido = real / cotacao_dolar;
+
+    printf("%.2f Reais = %.2f Dolar", real, real_convertido);
+    return 0;
+    }
