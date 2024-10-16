@@ -1,0 +1,24 @@
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <math.h>
+
+
+
+    int main()
+    {
+        /* 6)Faça um programa que leia o tempo de duração de um evento em uma fábrica expressa em
+                segundos e mostre-o expresso em horas, minutos e segundos */
+    
+    int horas, minutos, segundos, resto;
+    printf("Quantos segundos tem o evento: ");
+    scanf("%d", &segundos);
+
+    horas = segundos / 3600;
+    resto = segundos % 3600;
+
+    minutos = resto / 60;
+    resto = resto % 60;
+
+    printf("Horas: %d, Minutos: %d, Segundos: %d", horas, minutos, resto);
+    return 0;
+    }
