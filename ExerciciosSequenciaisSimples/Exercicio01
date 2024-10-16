@@ -1,1 +1,25 @@
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <math.h>
 
+
+
+    int main()
+    {
+    float prestacao, taxa, valor;
+    int tempo;
+    printf("Digite o valor: ");
+    scanf("%f", &valor);
+
+    printf("Digite o taxa: ");
+    scanf("%f", &taxa);
+
+    printf("Digite o tempo: ");
+    scanf("%d", &tempo);
+
+    prestacao = valor + (valor * taxa / 100) * tempo;
+
+    printf("Prestacao fica de: %.2f", prestacao);
+
+    return 0;
+    }
