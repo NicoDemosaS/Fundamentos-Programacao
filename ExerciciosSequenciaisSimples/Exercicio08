@@ -1,0 +1,26 @@
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <math.h>
+    #include <conio.h>
+
+
+    int main()
+    {
+    /* 08           Escrever um programa na linguagem C para ler um numero;
+                sabendo que hoje é segunda-feira, que dia da semana será se somar o número de dias informado */
+    int numero_somar;
+    printf("Numero a somar nos dias:", numero_somar);
+    scanf("%d", &numero_somar);
+
+
+    switch (numero_somar)
+{
+   case 1:
+     printf("Terça-Feira");
+   break;
+
+       default :
+    printf ("Valor invalido!\n");
+  }
+}
+
