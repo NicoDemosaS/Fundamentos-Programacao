@@ -1,0 +1,21 @@
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <math.h>
+
+
+
+    int main()
+    {
+    /* 7) Escreva um algoritmo que tendo como dados de entrada a distancia total em Km e a
+                quantidade de litros de combustivel gasto em uma viagem, calcular e escrever o consumo
+                        médio do veiculo nesta viagem. */
+    float km, litros, consumo_medio;
+    printf("Quantos km rodados: ");
+    scanf("%f", &km);
+    printf("Quantos Litros usados: ");
+    scanf("%f", &litros);
+
+    consumo_medio = km / litros;
+    printf("O consumo medio do Veiculo foi de: %.2f KM/L", consumo_medio);
+    return 0;
+    }
