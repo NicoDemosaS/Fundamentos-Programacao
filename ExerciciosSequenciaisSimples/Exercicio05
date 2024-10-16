@@ -6,11 +6,19 @@
 
     int main()
     {
-    int idade, mes, ano;
+    int idade, dias, mes, anos, resto;
     printf("Idade em dias: ");
     scanf("%d", &idade);
-    mes = idade / 30;
-    ano = mes / 12;
-    printf("Voce tem %d Ano(s), %d Mes(es) e %d Dia(s) de Idade", ano, mes, idade);
+    dias = idade;
+
+    anos = dias / 365;
+    resto = dias % 365;
+
+    mes = resto / 30;
+    resto = resto % 30;
+
+
+
+    printf("Voce tem %d Ano(s), %d Mes(es) e %d Dia(s) de Idade", anos, mes, resto);
     return 0;
     }
