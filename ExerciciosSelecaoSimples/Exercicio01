@@ -1,1 +1,24 @@
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <string.h>
 
+    int main()
+    {
+       /* 1) Faça um algoritmo que leia dois números A e B e imprima o maior deles.
+                        Utilizando comando de decisão. */
+        int a, b;
+        printf("Valor de A: ");
+        scanf("%d", &a);
+
+        printf("Valor de B: ");
+        scanf("%d", &b);
+
+        if(a > b)
+        printf("A-> %d é Maior que B-> %d", a, b);
+        else
+         printf("A-> %d é Menor que B-> %d", a, b);
+
+
+
+       return 0;
+    }
