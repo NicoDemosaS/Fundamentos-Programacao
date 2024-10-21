@@ -1,0 +1,44 @@
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <string.h>
+
+    int main()
+    {
+       /* 2) Escreva um algoritmo que, para uma conta bancária, leia o seu número,
+                o saldo, o tipo de operação a ser realizada (depósito ou retirada) e o valor
+            da operação. Após, determine e mostre o novo saldo. Se o novo saldo
+                    ficar negativo, deve ser mostrada, também, a mensagem “conta
+                                    estourada”. */
+        float saldo, aux;
+        int tipo_operacao;
+        printf("Saldo: ");
+        scanf("%f", &saldo);
+
+        printf("1 - Adicionar Valor \n2 - Remover Valor \n");
+        scanf("%d", &tipo_operacao);
+
+        if(tipo_operacao == 1)
+           {
+            printf("Deposito a Conta: ");
+            scanf("%f", &aux);
+            saldo = saldo + aux;
+            printf("Adicionado %.1f RS\nSeu novo Saldo %.1f RS", aux, saldo);
+           }
+        if (tipo_operacao == 2)
+        {
+            printf("Remover da Conta: ");
+            scanf("%f", &aux);
+            saldo = saldo - aux;
+            printf("Removido %.1f RS\nSeu novo Saldo %.1f RS", aux, saldo);
+
+            if(saldo <= 0)
+            {
+                printf("\nCONTA ESTOURADA!!!!");
+
+            }
+           }
+
+
+
+       return 0;
+    }
