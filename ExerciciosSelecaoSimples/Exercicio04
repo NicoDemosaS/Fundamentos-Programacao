@@ -8,13 +8,14 @@
             dúzia, e R$ 1,00 se forem compradas pelo menos 12. Escreva um
                     algoritmo que leia o número de maças compradas calcule e escreva o
                             total da compra. */
-       int maca;
+       int macas;
        printf("Macas a Comprar: ");
-       scanf("%d", macas);
-       
-       if(macas > 12)
-        printf("Macas %d, Preco Total %.2f", macas, macas*1)
-        
+       scanf("%d", &macas);
+
+       if(macas >= 12)
+        printf("Macas: %d, Preco Total: %dR$", macas, macas);
+       if(macas < 12)
+        printf("Macas: %d, Preco Total: %.1fR$", macas, macas*1.30);
 
        return 0;
     }
