@@ -1,0 +1,20 @@
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <string.h>
+
+    int main()
+    {
+        /* 4) As maças custam R$ 1,30 cada se forem compradas menos de uma
+            dúzia, e R$ 1,00 se forem compradas pelo menos 12. Escreva um
+                    algoritmo que leia o número de maças compradas calcule e escreva o
+                            total da compra. */
+       int maca;
+       printf("Macas a Comprar: ");
+       scanf("%d", macas);
+       
+       if(macas > 12)
+        printf("Macas %d, Preco Total %.2f", macas, macas*1)
+        
+
+       return 0;
+    }
