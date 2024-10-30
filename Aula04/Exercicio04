@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+        /*4) Escreva um programa em C que, dado a idade de um nadador, classifique-o em
+                        uma das seguintes categorias */
+
+    int idade;
+    printf("Idade: ");
+    scanf("%d", &idade);
+
+    if(5 <= idade && idade <= 7)
+        printf("Infantil A");
+
+    if(8 <= idade && idade <= 10)
+        printf("Infantil B");
+
+    if(11 <= idade && idade <= 13)
+        printf("Juvenil A");
+
+    if(14 <= idade && idade <= 17)
+        printf("Juvenil b");
+
+    if(idade > 18)
+        printf("Adulto");
+}
