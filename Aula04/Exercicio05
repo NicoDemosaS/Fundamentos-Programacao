@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+        /*5) Escreva um programa em C que dado três lados A, B, C verificar se eles podem
+            ser os comprimentos dos lados de um triângulo e, se forem, verificar se compõem
+            um triângulo equilátero, isósceles ou escaleno. Informar se não compuserem
+            nenhum triângulo.
+            O que é um triangulo: figura geométrica de três lados, em que cada um é menor
+            que a soma dos outros dois.
+            - Triângulo equilátero: três lados iguais.
+            - Triângulo isósceles: dois lados iguais.
+            - Triângulo escaleno: todos os lados diferentes. */
+
+    int ladoA, ladoB, ladoC;
+    printf("LadoA: ");
+    scanf("%d", &ladoA);
+
+    printf("LadoB: ");
+    scanf("%d", &ladoB);
+
+    printf("LadoC: ");
+    scanf("%d", &ladoC);
+
+    if(ladoA == ladoB && ladoB == ladoC)
+        printf("EQUILATERO!");
+    if( ladoA == ladoB || ladoB == ladoC || ladoA == ladoC)
+        printf("Isosceles!");
+    if(ladoA != ladoB && ladoC != ladoB && ladoC != ladoA)
+        printf("Escaleno");
+
+}
