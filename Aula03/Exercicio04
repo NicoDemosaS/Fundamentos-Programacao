@@ -1,0 +1,27 @@
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <string.h>
+
+    int main()
+    {
+        /*4) Escreva um programa em C para ler três notas e o nome de um
+aluno, calcular e escrever sua média e o conceito aprovado ou
+reprovado(aprovado com média maior ou igual a 7 */
+       float nota1, nota2, nota3, media;
+       printf("Primeira Nota: ");
+       scanf("%f", &nota1);
+
+       printf("Segunda Nota: ");
+       scanf("%f", &nota2);
+
+       printf("Terceira Nota: ");
+       scanf("%f", &nota3);
+    media = (nota1 + nota2 + nota3) / 3;
+    if(media >= 7)
+        printf("Aprovado com nota %.1f", media);
+    else
+        printf("Reprovado com nota %.1f", media);
+
+
+       return 0;
+    }
