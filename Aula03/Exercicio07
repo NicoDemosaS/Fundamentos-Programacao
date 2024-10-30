@@ -1,0 +1,47 @@
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <string.h>
+
+    int main()
+    {
+       /* 7) Escreva um programa em C para ler o nome, altura e peso de duas
+                pessoas, mostrar o nome da pessoa mais pesada e o nome da pessoa
+                                        mais alta. */
+    char nome1[25], nome2[25];
+    float altura1, peso1, altura2, peso2;
+
+    printf("Nome: ");
+    gets(nome1);
+    setbuf(stdin, NULL);
+
+    printf("Altura: ");
+    scanf("%f", &altura1);
+    setbuf(stdin, NULL);
+
+    printf("Peso:");
+    scanf("%f", &peso1);
+    setbuf(stdin, NULL);
+
+    printf("Nome: ");
+    gets(nome2);
+    setbuf(stdin, NULL);
+
+    printf("Altura: ");
+    scanf("%f", &altura2);
+    setbuf(stdin, NULL);
+
+    printf("Peso:");
+    scanf("%f", &peso2);
+    setbuf(stdin, NULL);
+
+    if(altura1> altura2)
+        printf("A pessoa mais alta e %s com %.2f ", nome1, altura1);
+    else
+        printf("A pessoa mais alta e %s com %.2f ", nome2, altura2);
+    if(peso1 > peso2)
+        printf("\nA pessoa mais pesada e %s com %.2f", nome1, peso1);
+    else
+        printf("\nA pessoa mais pesada e %s com %.2f", nome2, peso2);
+
+       return 0;
+    }
