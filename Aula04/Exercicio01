@@ -1,1 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
 
+int main()
+{
+        /*1) Escreva um programa em C que leia o ano de nascimento de uma pessoa,
+            calcule e escreva a sua idade e, também, verifique se ela tem idade para
+            votar(16 anos ou mais) e para conseguir a carteira de habilitação (18 anos ou
+                    mais). */
+
+    int idade, nascimento;
+    printf("Ano de Nascimento:");
+    scanf("%d", &nascimento);
+    idade = 2024 - nascimento;
+    printf("Voce tem %d Anos", idade);
+    if(idade >= 16 )
+        printf("\nPode Votar!");
+    if(idade >= 18)
+        printf("\nPode fazer Carteira!");
+
+
+
+}
