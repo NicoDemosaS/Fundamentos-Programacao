@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+      /*  3) Escreva um programa em C que, tendo como dados de entrada seu código de origem e preço,
+                mostre o preço junto de sua procedência, caso o produto não seja nenhum dos especificados, o
+                produto deve ser considerado importado. */
+
+
+        int codigo;
+        float preco;
+        printf("Codigo do Produto: ");
+        scanf("%d", &codigo);
+        printf("Preco do Produto");
+        scanf("%f", &preco);
+
+        switch(codigo)
+        {
+
+        case 1:
+            printf("Sul, Preco: %.2f", preco);
+        break;
+
+        case 2:
+            printf("Norte Preco: %.2f", preco);
+        break;
+
+        case 3:
+            printf("Leste Preco: %.2f", preco);
+        break;
+
+        case 4:
+            printf("Oeste Preco: %.2f", preco);
+        break;
+
+        case 5 ... 6:
+            printf("Nordeste Preco: %.2f", preco);
+        break;
+
+        case 7 ... 9:
+            printf("Sudeste Preco: %.2f", preco);
+        break;
+
+        case 10 ... 20:
+            printf("Centro-Oeste Preco: %.2f", preco);
+        break;
+
+        case 25 ... 30:
+            printf("Noroeste Preco: %.2f", preco);
+        break;
+
+        }
+        return 0;
+}
