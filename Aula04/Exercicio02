@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+        /*1) 2) Escreva um programa em C que leia o código de um determinado produto e
+                        mostre a sua classificação, conforme tabela abaixo */
+
+    int codigo;
+    printf("Codigo do Produto: ");
+    scanf("%d", &codigo);
+    if(codigo == 1)
+        printf("Alimento nao perecivel");
+    if(codigo == 2 || codigo == 3 || codigo == 4)
+        printf("Alimento Perecivel");
+    if(codigo == 5 || codigo == 6)
+        printf("Vestuario");
+    if(codigo == 7)
+        printf("Higiene Pessoal");
+    if(8 <= codigo && codigo <= 15)
+        printf("Limpeza");
+    if(codigo > 15)
+        printf("Invalido");
+
+
+
+
+}
