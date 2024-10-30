@@ -1,0 +1,60 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+      /*  4) Escreva um programa em C que receba o valor da venda, escolha a condição de
+            pagamento no menu e mostre o total da venda final conforme condições a seguir:
+            1-Venda a Vista - desconto de 10%
+            2-Venda a Prazo 30 dias - desconto de 5%
+            3-Venda a Prazo 60 dias - mesmo preço
+            4-Venda a Prazo 90 dias - acréscimo de 5%
+            5-Venda com cartão de débito - desconto de 8%
+            6-Venda com cartão de crédito - desconto de 7% */
+
+
+        int opcao;
+        float valor_venda;
+        printf("Valor de Venda: ");
+        scanf("%f", &valor_venda);
+
+        printf("1 - Venda a Vista - desconto de 10%%\n"
+        "2 - Venda a Prazo 30 dias - desconto de 5%%\n"
+        "3 - Venda a Prazo 60 dias - mesmo preco\n"
+        "4 - Venda a Prazo 90 dias - acrescimo de 5%%\n"
+        "5 - Venda com cartao de debito - desconto de 8%%\n"
+        "6 - Venda com cartao de credito - desconto de 7%%\n");
+        printf("Opcao: ");
+        scanf("%d", &opcao);
+
+        switch(opcao)
+        {
+        case 1:
+            printf("Preco final: %.2f", valor_venda * 0.9);
+            break;
+        case 2:
+            printf("Preco final: %.2f", valor_venda * 0.95);
+            break;
+        case 3:
+            printf("Preco final: %.2f", valor_venda * 1);
+            break;
+        case 4:
+            printf("Preco final: %.2f", valor_venda * 1.05);
+            break;
+        case 5:
+            printf("Preco final: %.2f", valor_venda * 0.92);
+            break;
+        case 6:
+            printf("Preco final: %.2f", valor_venda * 0.93);
+            break;
+
+
+
+
+
+
+        }
+
+
+        return 0;
+}
