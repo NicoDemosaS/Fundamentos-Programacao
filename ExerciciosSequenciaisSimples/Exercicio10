@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int a, b, c;
+    printf("Valor de A: ");
+    scanf("%d", &a);
+
+    printf("Valor de B: ");
+    scanf("%d", &b);
+
+    printf("Valor de C: ");
+    scanf("%d", &c);
+
+    if(a + b == c)
+    printf("%d + %d = %d", a, b, c);
+    if(a + b > c)
+    printf("%d + %d > %d", a, b, c);
+    if(a + b < c)
+    printf("%d + %d < %d", a, b, c);
+}
