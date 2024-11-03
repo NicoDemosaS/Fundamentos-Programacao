@@ -1,0 +1,25 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    int a, b;
+    printf("Primeiro Valor: ");
+    scanf("%d", &a);
+    
+    printf("Segundo Valor: ");
+    scanf("%d", &b);
+    
+    if(a % b == 0 || b % a == 0)
+        printf("Sao multiplos");
+    else
+        printf("Nao sao multiplos");
+    return 0;
+}
