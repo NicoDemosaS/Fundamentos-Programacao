@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    float vendas, comissao;
+    printf("Quanto o Vendedor Vendeu?\n");
+    scanf("%f", &vendas);
+    if(vendas>50000)
+        comissao = (12.0/100) * vendas;
+    if(vendas >= 30000 && vendas < 50000)
+        comissao = (9.5/100) * vendas;
+    else
+        comissao = (7.0/100) * vendas;
+    printf("Venda: %.2f Comissao: %.2f", vendas, comissao);
+
+    return 0;
+}
