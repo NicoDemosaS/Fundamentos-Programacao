@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    /* 3) Escreva um programa em C para ler um conjunto de 5 números calcular e escrever
+                o maior e menor valor deste conjunto. */
+    int cont = 1 , a, menor, maior;
+    maior = 0;
+    while(cont<=5)
+    {
+    printf("Numero %d: ", cont);
+    scanf("%d", &a);
+    if(cont==0)
+        menor = a;
+    if(a<menor)
+        menor = a;
+    if(a>maior)
+        maior = a;
+    cont++;
+    }
+    printf("Maior %d, Menor %d", maior, menor);
+
+}
