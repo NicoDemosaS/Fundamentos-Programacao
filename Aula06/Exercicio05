@@ -11,21 +11,18 @@ int main()
             4 + 3
             9 − ⋯ − 10
             100 */
-    int cont;
+    int cont = 1;
     float s;
     s = 1;
-    printf("DEBUG");
-    while(cont < 10)
-    {
+    while (cont != 10){
         if(cont % 2 == 0)
-            s = s + cont / (cont * cont);
+            s = s + (float)cont / (cont * cont);
 
         if(cont % 2 == 1)
-            s = s - cont / (cont * cont);
+            s = s - (float)cont / (cont * cont);
 
         cont++;
     }
-    printf("TESTE");
-    printf("Resultado: %.f", s);
+    printf("Resultado: %f", s);
     return 0;
 }
