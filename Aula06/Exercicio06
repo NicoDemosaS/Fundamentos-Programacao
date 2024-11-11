@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+               /* 6) Escrever um programa em C para ler um número calcular e escrever o seu fatorial. */
+    int s, c, cont = 1;
+    printf("NUMERO: ");
+    scanf("%d", &c);
+    s = c;
+    while(cont != c)
+    {
+        s = s * (c-1);
+        printf("%d -> ", c);
+        c--;
+
+    }
+printf("-> %d", s);
+
+
+
+
+
+    return 0;
+}
