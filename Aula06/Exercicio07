@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+              /* 7) Escreva um programa em C que leia um número n que indica quantos valores
+    devem ser lidos a seguir. Para cada número lido, calcular e escrever o fatorial deste
+    número. */
+    int a, num, max, cont = 1, cont2 = 1, c = 1;
+    printf("Quantos Valores? ");
+    scanf("%d", &num);
+    // Ler x Numeros
+
+    while(cont <= num)
+    {
+        printf("Numero %d: ", cont);
+        scanf("%d", &a);
+
+        max = a;
+        while(cont2 <= max)
+        {
+            if(cont2==max)
+                printf("->>%d\n", a);
+            a = a * cont2;
+            cont2++;
+        }
+        cont++;
+        cont2 = 1;
+    }
+
+
+
+    return 0;
+}
