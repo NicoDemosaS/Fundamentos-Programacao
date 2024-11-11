@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+               /* 5) Escreva um programa em C que determine o valor de S.
+            𝑠 = 1
+            1 − 2
+            4 + 3
+            9 − ⋯ − 10
+            100 */
+    int cont;
+    float s;
+    s = 1;
+    printf("DEBUG");
+    while(cont < 10)
+    {
+        if(cont % 2 == 0)
+            s = s + cont / (cont * cont);
+
+        if(cont % 2 == 1)
+            s = s - cont / (cont * cont);
+
+        cont++;
+    }
+    printf("TESTE");
+    printf("Resultado: %.f", s);
+    return 0;
+}
