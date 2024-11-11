@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float altura, somaalt;
+    int cont = 1, idade, media, somaidad;
+    while(cont<=2){
+
+        printf("Idade %d: ", cont);
+        scanf("%d", &idade);
+        somaidad = somaidad + idade;
+        setbuf(stdin, NULL);
+        printf("Altura %d: ", cont);
+        scanf("%f", &altura);
+        setbuf(stdin, NULL);
+        somaalt = somaalt + altura;
+        cont++;
+    }
+    printf("Media das idades é %d\n", somaidad / cont);
+    printf("Media das alturas é %.2f\n", somaalt / cont);
+}
