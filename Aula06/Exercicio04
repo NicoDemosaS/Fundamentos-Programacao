@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    /* 4) Escreva um programa em C para calcular e escrever a série fibonacci até o vigésimo
+                        termo.
+                        1 1 2 3 5 8 13 21 34 .......... */
+    int cont = 1, a, b, c;
+    a = 0;
+    b = 1;
+    while(cont != 20)
+    {
+        printf("%d ", a);
+        c = a + b;
+        a = b;
+        b = c;
+
+        cont++;
+    }
+
+
+}
