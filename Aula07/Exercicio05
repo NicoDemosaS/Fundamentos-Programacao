@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+              /* 5) Escreva um programa em C para calcular e escreve a soma dos dez primeiros
+                        termos da série
+                        série = 2/500 - 5/450 + 2/400 - 5/350 +........ */
+   int cont;
+   double serie = 0, numerador, denominador, pre_result;
+   denominador = 500;
+   for(cont=0; cont<10; cont++)
+   {
+
+    //printf("Denominador: %.2f", denominador);
+
+    if(cont%2==0)
+    {
+        numerador = 2;
+        pre_result = numerador/denominador;
+        serie = serie + pre_result;
+        printf("Numerador: %f - Denominador - %f Resultado + %0.4f\n", numerador, denominador, pre_result);
+
+    }
+
+    if(cont%2==1)
+    {
+        numerador = 5;
+        pre_result = numerador/denominador;
+        serie = serie - pre_result;
+        printf("Numerador: %f - Denominador - %f Resultado - %0.4f\n", numerador, denominador, pre_result);
+
+    }
+
+    denominador = denominador - 50;
+        }
+    printf("Serie -> %0.5f", serie);
+    //printf("Serie: %.3f", serie);
+
+    return 0;
+}
