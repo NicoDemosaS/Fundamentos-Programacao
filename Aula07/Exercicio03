@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+              /* 2) 3) Escreva um programa em C para calcular e escrever o valor de E, sendo que o
+                                valor de N deverá ser informado pelo usuário.
+                                E = 1 + 1/1! + 1/2! + 1/3! + .....+ 1/n! */
+   int n, i, fat, cont;
+   float e = 1;
+   scanf("%d", &n);
+   for(i=1; i<=n; i++)
+   {
+       fat = 1;
+       for(cont=1; cont<=i; cont++)
+       {
+           fat = fat * cont;
+       }
+       e = e + 1.0 / fat;
+   }
+    printf("Valor de E %.3f", e);
+
+
+
+    return 0;
+}
