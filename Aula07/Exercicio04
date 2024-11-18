@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+              /* 4) Escreva um programa em C para ler um número qualquer calcular e escrever a
+                    soma dos números inteiros de 1 até o número */
+   int num, soma, i;
+   printf("Numero qualquer: ");
+   scanf("%d", &num);
+   for(i=0; i<=num; i++)
+    {
+        soma = soma + i;
+    }
+    
+    printf("Soma: %d", soma);
+    
+    
+    return 0;
+}
