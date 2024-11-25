@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+    /* 3) Ana tem 1,50 metros e cresce 2 centímetros por ano, enquanto feliz tem 1,10
+        e cresce 3 centímetros por ano. construa um programa em C que calcule e
+        escreva o número de anos que serão necessários para que Feliz seja maior que
+        Ana */
+   float ana, feliz;
+   int ano;
+   ana = 1.50;
+   feliz = 1.10;
+   while(1)
+   {
+       ana = ana + 0.02;
+       feliz = feliz + 0.03;
+       ano++;
+       if(feliz>ana)
+       {
+           printf("Feliz -> %.2fm Ana -> %.2fm\n", feliz, ana);
+           printf("%d Anos", ano);
+           break;
+       }
+   }
+
+    return 0;
+}
