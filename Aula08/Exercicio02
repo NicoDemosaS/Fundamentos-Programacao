@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+    /* 2) Escreva um programa em C para montar um menu de opções e executar cada
+            uma das tarefas, conforme abaixo:
+            1 – somar dois números
+            2 – subtração de dois números
+            3 – multiplicação de dois números
+            4 – divisão de dois números
+            5 - fim */
+    int opcao, A, B;
+    do{
+        printf("1 > somar dois números\n"
+            "2 > subtração de dois números\n"
+            "3 > multiplicação de dois números\n"
+            "4 > divisão de dois números\n"
+            "5 > fim\n");
+            scanf("%d", &opcao);
+            if(opcao == 1)
+            {
+                printf("Primeiro Numero: ");
+                scanf("%d", &A);
+                printf("Segundo Numero: ");
+                scanf("%d", &B);
+                printf("%d + %d = %d\n", A, B, A+B);
+            }
+            if(opcao == 2)
+            {
+              printf("Primeiro Numero: ");
+                scanf("%d", &A);
+                printf("Segundo Numero: ");
+                scanf("%d", &B);
+                printf("%d - %d = %d\n", A, B, A-B);
+            }
+            if(opcao == 3)
+            {
+              printf("Primeiro Numero: ");
+                scanf("%d", &A);
+                printf("Segundo Numero: ");
+                scanf("%d", &B);
+                printf("%d * %d = %d\n", A, B, A * B);
+            }
+            if(opcao == 4)
+            {
+              printf("Primeiro Numero: ");
+                scanf("%d", &A);
+                printf("Segundo Numero: ");
+                scanf("%d", &B);
+                printf("%d / %d = %d\n", A, B, A/B);
+            }
+            if(opcao == 5)
+                break;
+
+
+    }while(1);
+
+    return 0;
+}
