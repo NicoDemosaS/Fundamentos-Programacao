@@ -14,18 +14,14 @@ int main()
    int ano;
    ana = 1.50;
    feliz = 1.10;
-   while(1)
+   while(feliz< ana)
    {
        ana = ana + 0.02;
        feliz = feliz + 0.03;
        ano++;
-       if(feliz>ana)
-       {
-           printf("Feliz -> %.2fm Ana -> %.2fm\n", feliz, ana);
-           printf("%d Anos", ano);
-           break;
-       }
    }
+    printf("Feliz -> %.2fm Ana -> %.2fm\n", feliz, ana);
+    printf("%d Anos", ano);
 
     return 0;
 }
