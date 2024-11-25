@@ -1,2 +1,21 @@
-2) Escreva um algoritmo que encontre o quinto número maior que 1000, cuja
-divisão por 11 tenha resto 5
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+              /*  2) Escreva um algoritmo que encontre o quinto número maior que 1000, cuja
+        divisão por 11 tenha resto 5 */
+    int num = 1000, i;
+    for(i=0; i<=5; num++)
+    {
+        if(num % 11 == 5)
+        {
+            printf("%d\n", num);
+            i++;
+        }
+    }
+
+    return 0;
+}
