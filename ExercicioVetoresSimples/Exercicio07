@@ -12,7 +12,6 @@ correspondentes do vetor A e B. Apresentar o vetor C */
 
     int A[5], B[5], C[10];
     int i;
-    int fat;
     for(i=0;i<5;i++)
     {
         printf("A%d: ", i);
