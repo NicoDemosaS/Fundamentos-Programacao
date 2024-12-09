@@ -10,7 +10,6 @@ int main()
 calcular a media das notas e escrever as notas que estão acima da média.*/
 
     int notas[5];
-    int MediaAlta[5];
     int soma;
     int i;
     for(i=0;i<5;i++)
