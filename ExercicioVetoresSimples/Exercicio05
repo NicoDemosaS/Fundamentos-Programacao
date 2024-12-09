@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+    /* 5) Escrever um programa em C para definir e ler dois vetores A e B com 5 elementos cada
+construir um vetor C de mesma dimensão que deverá ser formado pela soma dos elementos
+correspondentes do vetor A com B. Apresentar o vetor C. */
+
+    int A[5], B[5], C[5];
+    int i;
+    for(i=0;i<5;i++)
+    {
+        printf("A%d: ", i);
+        scanf("%d,", &A[i]);
+        printf("B%d: ", i);
+        scanf("%d", &B[i]);
+
+        C[i] = A[i] + B[i];
+    }
+
+    printf("Valores de C\n");
+    for(i=0;i<5;i++)
+        printf("%d; ", C[i]);
+
+
+    return 0;
+}
