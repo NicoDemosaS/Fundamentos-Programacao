@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+    /* 4) escreva um programa em C para definir dois vetores com 5 elementos cada, sendo um vetor
+com nome e outro com as notas dos alunos, ler os vetores, calcular a media das notas e
+escrever o nome e as notas que estão acima da média.*/
+
+
+    char nome[5][30];
+    int notas[5];
+    int soma;
+    int i;
+    for(i=0;i<5;i++)
+    {
+        printf("Nome: ");
+        scanf("%s", &nome[i]);
+        printf("Nota: ");
+        scanf("%d", &notas[i]);
+
+        soma = soma + notas[i];
+    }
+
+    printf("Nomes e Notas acima da Media\n");
+    for(i=0;i<5;i++)
+        if(notas[i] > (soma/5))
+        printf("%s - %d; ", nome[i],notas[i]);
+
+
+    return 0;
+}
