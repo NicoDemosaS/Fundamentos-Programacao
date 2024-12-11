@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+    /* 12) Escrever um programa em C para ler um vetor A com 10 elementos construir dois vetores B
+e C com mesma dimensão que deverá ser formado pela seguinte regra, vetor B deverá ser
+formado pelos elementos impares do vetor A e o vetor C deverá ser formado pelos elementos
+pares do vetor A, escrever os vetores B e C. */
+
+    int A[10], B[10], C[10];
+    int i, imp=-1, par=-1;
+    for(i=0;i<10;i++)
+    {
+        printf("A%d: ", i);
+        scanf("%d,", &A[i]);
+    }
+
+    for(i=0;i<10;i++)
+    {
+        if((A[i] % 2) == 0)
+        {
+            par++;
+            C[par] = A[i];
+        }
+        else
+        {
+            imp++;
+            B[imp] = A[i];
+        }
+    }
+
+
+    printf("Valores de C\n");
+    for(i=0;i<=par;i++)
+        printf("%d; ", C[i]);
+
+    printf("\nValores de B\n");
+    for(i=0;i<=imp;i++)
+        printf("%d; ", B[i]);
+
+
+
+
+
+    return 0;
+}
