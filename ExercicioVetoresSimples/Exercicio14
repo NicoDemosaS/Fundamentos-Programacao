@@ -1,0 +1,47 @@
+INCOMPLETO !!
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+    /* 14) Escrever um programa em C para ler e armazenar em um vetor a temperatura média de todos
+os dias do ano(365), calcular e escrever.
+a) Menor temperatura do ano
+b) Maior temperatura do ano
+c) temperatura media anual
+d) Número de dias do ano em que a temperatura foi inferior que a média anual */
+
+    int dia, temperatura[365], quant,temp,maior=0, menor=100, i;
+    float soma;
+    for(dia=0;dia<10;dia++)
+    {
+        printf("Dia: ");
+        scanf("%d", &temperatura[dia]);
+
+        if (temperatura[dia] > maior)
+            maior = temperatura[dia];
+        if(temperatura[dia] < menor)
+            menor = temperatura[dia];
+        soma = soma + temperatura[dia];
+    }
+    for(i=0; i<10; i++)
+        if(temperatura[dia] > (soma/365))
+            quant++;
+    printf("Maior temperatura %d\n", maior);
+    printf("Menor Temperatura %d\n", menor);
+    printf("Temperatura Media %.2f\n", soma/365);
+    printf("Quantidade de Dias maior que a Media %d", quant);
+
+
+
+
+
+
+
+
+    return 0;
+}
