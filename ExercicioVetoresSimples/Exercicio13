@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+    /* 13) Escrever um programa em C para definir e ler um vetor A com 10 elementos calcular e
+escrever o maior elemento do vetor e sua posição. */
+
+    int A[10];
+    int i, maior=0, posicao=0;
+    for(i=0;i<10;i++)
+    {
+        printf("A%d: ", i);
+        scanf("%d,", &A[i]);
+        if(A[i] > maior)
+        {
+            maior = A[i];
+            posicao = i;
+        }
+    }
+
+    printf("Maior Valor: %d\nPosicao: %d", maior, posicao);
+
+
+
+
+
+
+
+    return 0;
+}
