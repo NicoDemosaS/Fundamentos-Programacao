@@ -1,1 +1,25 @@
-ORDENACAO AI 
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+    int aux, j, i, menor, a[5] = {12, 5, 2, 7, 4};
+    for(i=0; i<5;i++)
+    {
+
+        for(j=i+1;j<5;j++)
+        {
+            if(a[i] > a[j])
+            {
+                aux = a[i];
+                a[i] = a[j];
+                a[j] = aux;
+            }
+        }
+    printf("%d ", a[i]);
+    }
+    return 0;
+}
