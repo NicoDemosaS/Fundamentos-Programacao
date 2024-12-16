@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+    /* 1) Escreva um Programa em C para definir e ler três vetores com 5 elementos cada, sendo nome do aluno, e
+suas duas notas, ordenar pelo vetor nome. escrever nome, média do aluno e a mensagem aprovado ou
+reprovado; media para aprovado 7,0 */
+
+    int j, i;
+    char nome[5][30];
+    char aux[30];
+    int nota1[5];
+    int nota2[5];
+    for(i=0; i<3;i++)
+    {
+        scanf("%s", &nome[i]);
+        setbuf(stdin,NULL);
+    }
+
+    // ORDENANDO..
+    for(i=0; i<2;i++)
+    {
+        for(j=i+1;j<3;j++)
+        {
+            if(strcmp(nome[i],nome[j]) == 1)
+            {
+                strcpy(aux, nome[i]);
+                strcpy(nome[i], nome[j]);
+                strcpy(nome[j], aux);
+            }
+        }
+    }
+
+    for(i=0; i<3; i++)
+    {
+
+        printf("%s\n", nome[i]);
+    }
+    return 0;
+}
