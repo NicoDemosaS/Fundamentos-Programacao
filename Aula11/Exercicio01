@@ -6,20 +6,54 @@
 int main()
 {
     setlocale(LC_ALL,"Portuguese");
-    int aux, j, i, menor, a[5] = {12, 5, 2, 7, 4};
-    for(i=0; i<5;i++)
-    {
+    /* 1) Escreva um Programa em C para definir e ler três vetores com 5 elementos cada, sendo nome do aluno, e
+suas duas notas, ordenar pelo vetor nome. escrever nome, média do aluno e a mensagem aprovado ou
+reprovado; media para aprovado 7,0 */
 
-        for(j=i+1;j<5;j++)
+    int j, i, aux1, media[5];
+    char nome[5][30];
+    char aux[30];
+    int nota1[5];
+    int nota2[5];
+    for(i=0; i<3;i++)
+    {
+        scanf("%s", &nome[i]);
+        setbuf(stdin,NULL);
+        printf("Nota1: ");
+        scanf("%d", &nota1[i]);
+        setbuf(stdin,NULL);
+        printf("Nota2: ");
+        scanf("%d", &nota2[i]);
+        setbuf(stdin,NULL);
+
+        media[i] = nota1[i] + nota2[i];
+    }
+
+    // ORDENANDO..
+    for(i=0; i<2;i++)
+    {
+        for(j=i+1;j<3;j++)
         {
-            if(a[i] > a[j])
+            if(strcmp(nome[i],nome[j]) == 1)
             {
-                aux = a[i];
-                a[i] = a[j];
-                a[j] = aux;
+                strcpy(aux, nome[i]);
+                strcpy(nome[i], nome[j]);
+                strcpy(nome[j], aux);
+                aux1 = media[i];
+                media[i] = media[j];
+                media[j] = aux1;
             }
         }
-    printf("%d ", a[i]);
+    }
+
+    for(i=0; i<3; i++)
+    {
+
+        printf("%s - %d", nome[i], media[i]/2);
+        if((media[i]/2) > 7)
+            printf("\nAprovado");
+        else
+            printf("\nReprovado");
     }
     return 0;
 }
