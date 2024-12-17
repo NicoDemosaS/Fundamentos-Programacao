@@ -1,0 +1,62 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+    /* 2)Escrever um algoritmo que defina e leia um vetor com 13 elementos inteiros, que � o gabarito de um
+ teste da loteria esportiva,contendo os valores (1, 2 e 3), leia a seguir o nome do apostador, seu numero de cart�o e um vetor com as
+ 13 respostas, verifique para cada apostador o n�mero de acertos comparando com o vetor de gabarito de respostas, escrever o nome do apostador e seu
+ numero de acertos e mostrar a mensagem "ganhador" quando acertar os 13 jogos. o final da entrada de dados � conhecido quando informado "fim" como o nome do apostador.
+ */
+    char nome[30];
+    int A[5] = {2, 5, 3, 4, 0};
+    int B[5];
+    int flag, i, acertos;
+    while(1){
+        flag = 1;
+        acertos = 0;
+        printf("Nome: ");
+        gets(nome);
+        if(strcmp(nome, "fim") == 0)
+            break;
+
+        for(i=0;i<5;i++)
+        {
+            printf("%d - Numero: ", i+1);
+            scanf("%d", &B[i]);
+        }
+
+
+    // COMPARA RESPOSTAS E DA RESULTADO
+    for(i=0;i<5;i++)
+    {
+        if(A[i] != B[i])
+            flag = 0;
+        if(A[i] == B[i])
+            acertos++;
+    }
+    if(flag == 0)
+    {
+        printf("%s Perdeu\n", nome);
+        printf("%d Acertos\n", acertos);
+        setbuf(stdin, NULL);
+    }
+    else
+    {
+        printf("%s Ganhou\n", nome);
+        printf("%d Acertos\n", acertos);
+        setbuf(stdin, NULL);
+
+    }
+    for(i=0;i<5;i++)
+        printf("LOTERIA: %d VOCE: %d\n", A[i], B[i]);
+    }
+
+
+
+    return 0;
+}
+
