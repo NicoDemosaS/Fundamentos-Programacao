@@ -1,0 +1,49 @@
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <string.h>
+
+    int main()
+    {
+                    /* 4)Escrever um programa em C para definir e ler uma matriz A de 4 linhas e 5 colunas,
+    construir uma matriz B de mesma dimensão, onde cada elemento da matriz B deverá ser formado
+    pelo fatorial do elemento correspondente da matriz A, escrever a matriz B. */
+
+
+        int i, j, c,fat;
+        int A[4][5], B[4][5], C[2][7];
+        // Leitura das matrizes
+
+            // LER A
+            for(i=0;i<4;i++)
+            {
+                fat = 1;
+                for(j=0;j<5;j++)
+                {
+
+                    printf("A[%d][%d]", i, j);
+                    scanf("%d", &A[i][j]);
+                    fat = A[i][j];
+
+                    //Calculo Fatorial
+                    for(c=1;c<A[i][j];c++)
+                    {
+                        fat = fat * c;
+                    }
+                B[i][j] = fat;
+                }
+            }
+
+
+            // Printar B
+
+            for(i=0;i<4;i++)
+            {
+                printf("\n");
+                for(j=0;j<5;j++)
+                    printf("[%d]", B[i][j]);
+            }
+
+
+
+       return 0;
+    }
