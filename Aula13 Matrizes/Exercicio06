@@ -1,0 +1,25 @@
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <string.h>
+
+    int main()
+    {
+                        /* 6)Escreva um programa em C para definir e ler uma matriz com 4 linhas e 5 colunas,
+construir um vetor A com 4 elementos que será formado pela soma dos elementos de cada linha
+da matriz. Escrever os elementos do vetor. */
+
+        int matriz[4][5], vetorA[4] = {0, 0, 0, 0}, i, j;
+        //Leitura e Soma das Matrizes
+        for(i=0;i<4;i++)
+        {
+            for(j=0;j<5;j++)
+            {
+                printf("M[%d][%d]", i, j);
+                scanf("%d", &matriz[i][j]);
+                vetorA[i] += matriz[i][j];
+            }
+        }
+        for(i=0;i<4;i++)
+            printf("Linha %d -> [%d] ", i, vetorA[i]);
+       return 0;
+    }
