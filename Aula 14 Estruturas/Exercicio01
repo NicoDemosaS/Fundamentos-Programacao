@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    /* 1) Escreva um programa em C para cadastrar um cliente de uma loja. As informações necessárias são: nome,
+endereço e telefone. Deve ser usada uma estrutura de registro para a construção deste cadastro. */
+    struct cliente{
+        char nome[30];
+        char endereco[30];
+        char telefone[30];
+    }cliente_um;
+
+    printf("Nome do cliente: ");
+    fgets(cliente_um.nome, 30, stdin);
+    printf("\nEndereco: ");
+    fgets(cliente_um.endereco, 30, stdin);
+    printf("\nTelefone: ");
+    fgets(cliente_um.telefone, 30, stdin);
+
+    printf("%s", cliente_um.nome);
+    printf("%s", cliente_um.endereco);
+    printf("%s", cliente_um.telefone);
+    return 0;
+}
