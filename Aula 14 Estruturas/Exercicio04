@@ -1,0 +1,98 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+        /* 4) O mesmo exercício 2, mas após o término de todos os cadastros, ou seja, quando o usuário digitar "N" na
+    pergunta para novo cliente ou quando preencher o vetor com 5 clientes, deverá permitir a consulta aos clientes
+    por nome. Deverá ser digitado “Fim” para encerrar a consulta. */
+    struct cliente{
+        char nome[30];
+        char endereco[30];
+        char telefone[30];
+    }cliente[5], aux;
+    char resposta;
+    char consulta[30];
+    int  cont = 0;
+    int i, j;
+    int ini, final, meio, achou;
+    // Lendo nome endereco e telefone do usuario
+    do{
+
+        printf("Nome do cliente: ");
+        gets(cliente[cont].nome);
+        setbuf(stdin, NULL);
+
+        printf("Endereco: ");
+        gets(cliente[cont].endereco);
+        setbuf(stdin, NULL);
+
+        printf("Telefone: ");
+        gets(cliente[cont].telefone);
+        setbuf(stdin, NULL);
+
+        //Quer continuar?
+        printf("MAIS UM CLIENTE? S/N");
+        scanf("%c", &resposta);
+        setbuf(stdin, NULL);
+        if(cont == 5)
+            break;
+
+        cont++;
+    }while(resposta != 'N');
+
+    // ORDENACAO POR NOME
+    for(i=0;i<cont;i++)
+    {
+        for(j=i+1;j<cont;j++)
+        {
+            if(strcmp(cliente[i].nome, cliente[j].nome) > 0)
+            {
+                aux = cliente[i];
+                cliente[i] = cliente[j];
+                cliente[j] = aux;
+
+            }
+        }
+    }
+
+
+    // Consultar por Nome
+
+    do{
+        ini = 0;
+        final = cont -1;
+        achou = 0;
+        printf("\nPesquisar por nome -( fim encerra)");
+        gets(consulta);
+        setbuf(stdin, NULL);
+        if(strcmp(consulta, "FIM") == 0)
+            break;
+        // Pesquisa Binaria por nome
+        while(ini <= final && achou == 0)
+        {
+            meio = (ini + final) / 2;
+            if(strcmp(consulta, cliente[meio].nome) == 0){
+                achou = 1;
+                printf("%s Encontrado", cliente[meio].nome);
+                }
+            else
+                if(strcmp(consulta, cliente[meio].nome ) > 0)
+
+                    ini = meio + 1;
+                else
+                    ini = meio -1;
+        }
+    }while(1);
+
+
+    for(i=0;i<cont;i++)
+    {
+        printf("\nNome %s, Endereco %s, Telefone %s", cliente[i].nome, cliente[i].endereco, cliente[i].telefone);
+    }
+    /* printf("%s", cliente_um.nome);
+    printf("%s", cliente_um.endereco);
+    printf("%s", cliente_um.telefone); */
+    return 0;
+}
