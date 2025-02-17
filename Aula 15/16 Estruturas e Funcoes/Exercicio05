@@ -3,22 +3,25 @@
 #include "funcoes.h"
 int main()
 
-// NAO CONCLUIDO
+
 {
         /* 5)
     Escreva uma função que conte o número de vogais de uma
-    string passada como parâmetro, escrever o resultado.    */
-    int contarFuncoes(char str){
-    int tamanho, i;
-    char wnome[30]
-    tamanho = strlen(str);
-
-    for(i=0;i<tamanho;i++){
-        wnome = tolower(str);
-        if(strcomp(wnome[i] == 'a') ||)
-        }
+    string passada como parâmetro, escrever o resultado.
+       */
+    int contarFuncoes(char str[])
+    {
+        int tamanho, i, cont = 0;
+        tamanho = strlen(str);
+        str = tolower(str);
+        for(i=0;i<tamanho;i++)
+            {
+            if(str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u')
+                cont++;
+            }
+    return cont;
     }
 
-    Divisores(12);
+    printf("%d", contarFuncoes("abceEEe"));
     return 0;
 }
