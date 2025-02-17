@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "funcoes.h"
+int main()
+{
+    /* 1)
+    Escreva uma função que receba como parâmetro um
+    número inteiro e retorne -1
+    ou 1 se este número for negativo, positivo, respectivamente,
+    escrever o resultado. */
+
+    int parImpar(int a){
+    if(a % 2 == 0)
+        return 1;
+    else
+        return -1;
+    }
+
+    printf("%d", parImpar(3));
+    return 0;
+}
