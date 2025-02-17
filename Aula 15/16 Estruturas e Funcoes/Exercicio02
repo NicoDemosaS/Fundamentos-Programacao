@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "funcoes.h"
+int main()
+{
+        /* 2)
+    Escreva uma função que receba como parâmetro dois
+    números inteiros e retorne -1 se
+    o primeiro for menor que o segundo número, 0 se forem
+    iguais ou 1 se o primeiro for maior
+    que o segundo número, escrever o resultado. */
+
+    int maior(int a, int b){
+    if(a > b)
+        return 1;
+    if(a < b)
+        return -1;
+    else
+        return 0;
+    }
+
+    printf("%d", maior(2, 2));
+    return 0;
+}
