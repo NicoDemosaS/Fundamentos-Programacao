@@ -9,13 +9,13 @@ int main()
     ou 1 se este número for negativo, positivo, respectivamente,
     escrever o resultado. */
 
-    int parImpar(int a){
-    if(a % 2 == 0)
+    int Negativo(int a){
+    if(a > 0)
         return 1;
     else
         return -1;
     }
 
-    printf("%d", parImpar(3));
+    printf("%d", Negativo(3));
     return 0;
 }
