@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "funcoes.h"
+int main()
+{
+        /* 3)
+    Escreva uma função que receba um número e retorne -1 se
+    o número for ímpar ou 1 se for
+    par, escrever o resultado    */
+
+    int parImpar(int a){
+    if(a % 2 == 0)
+        return 1;
+    else
+        return -1;
+
+    }
+
+    printf("%d", parImpar(2));
+    printf("\n%d", parImpar(3));
+    return 0;
+}
