@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "funcoes.h"
+int main()
+
+// NAO CONCLUIDO
+{
+        /* 5)
+    Escreva uma função que conte o número de vogais de uma
+    string passada como parâmetro, escrever o resultado.    */
+    int contarFuncoes(char str){
+    int tamanho, i;
+    char wnome[30]
+    tamanho = strlen(str);
+
+    for(i=0;i<tamanho;i++){
+        wnome = tolower(str);
+        if(strcomp(wnome[i] == 'a') ||)
+        }
+    }
+
+    Divisores(12);
+    return 0;
+}
