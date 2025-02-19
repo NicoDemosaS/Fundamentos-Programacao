@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "funcoes.h"
+/* 2)
+escreva um programa em linguagem C para definir e ler duas variaveis do tipo inteiro,
+desenvolver e invocar um procedimento para efetuar a troca dos valores, no procedimento
+principal escrever o conteudo das variaveis */
+
+int main()
+{
+   int x, y;
+   printf("x:");
+   scanf("%d", &x);
+   printf("\ny: ");
+   scanf("%d", &y);
+   printf("x: %d y: %d\n", x, y);
+   alternar(&x, &y);
+   printf("x: %d y: %d", x, y);
+  return 0;
+}
+   void alternar(int *px, int *py){
+       int aux;
+       aux = *px;
+       *px = *py;
+       *py = aux;
+   }
+
+
