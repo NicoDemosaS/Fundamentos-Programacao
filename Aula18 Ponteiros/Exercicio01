@@ -1,1 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "funcoes.h"
+/* 1)
+Declare uma variável x com valor 10.
+Declare um ponteiro ptr do tipo um inteiro.
+Atribua o endereço de x ao ponteiro ptr.
+Imprima o valor de x utilizando o ponteiro ptr.
+Imprima o endereço de x.
+Imprima o valor apontado por ptr. */
 
+int main()
+{
+   int x = 10;
+   int *ptr;
+   ptr = &x;
+   printf("Imprima valor de x ao ponteiro ptr: %d", *ptr);
+   printf("\nImprima o endereço de x %p:", &x);
+   printf("\nImprima o valor apontado por ptr %p", ptr);
+
+    return 0;
+}
